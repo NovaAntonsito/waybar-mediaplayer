@@ -1,4 +1,5 @@
 {
+  "wantlyrics": true,
   "refresh_interval": 500,
   "is_notification": false,
   "notification_min_interval": 2,

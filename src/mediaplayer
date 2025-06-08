@@ -284,7 +284,9 @@ def update_metadata(player, metadata, manager):
     )
     # Lyrics
     artist = player.get_artist() or ""
-    get_new_lyrics(artist, title)
+    #Configuracion para quitar lyrics a gusto desde el JSON
+    if(config["wantlyrics"]):
+        get_new_lyrics(artist, title)
     logger.debug("Returning")
 
 
