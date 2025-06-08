@@ -198,7 +198,7 @@ def gen_widget_text(player):
             l_rot = last_rot
         song_info = rotate_str_left(song_info, l_rot)
         text = icon + song_info
-
+    logger.debug(f"Texto mandado {text}")
     return text
 
 
