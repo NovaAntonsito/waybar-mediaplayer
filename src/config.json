@@ -1,4 +1,5 @@
 {
+  "downloadArt": true,
   "wantlyrics": true,
   "refresh_interval": 500,
   "is_notification": false,

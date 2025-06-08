@@ -266,9 +266,10 @@ def update_metadata(player, metadata, manager):
     if not updated:
         logger.debug("Progress bar not updated. Returning")
         return False
-    # Download album art
     art_url = metadata.get("mpris:artUrl", None)
-    if art_url and art_url != last_art_url:
+    #Verifica si existe una URL para el arte del album y verifica que el mismo no sea parecido al anterior URL
+    #Se agrega condicion en el json si quiere descargar el arte del album a gusto
+    if art_url and art_url != last_art_url and config["downloadArt"]:
         download_art(art_url)
         last_art_url = art_url
     # Notification
